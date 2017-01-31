@@ -1,0 +1,66 @@
+---
+title: "Hangman Documentation"
+author: "Karl-Heinz Reisenauer"
+date: "31 Januar 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+## Overview
+
+This document describes how to run this application and how to use it.
+
+This application has been inspired by Marek Hlavac (Political Economy and Government, Harvard University). 
+
+He has written a Hangman game in R and I wanted to convert it into a Shiny app.
+I have taken over the words to be guessed and some code fragmente and added the "HD" graphics and the Shniny part :).
+
+The original can be found here:
+https://sites.google.com/site/marekhlavac/computer-games-written-in-r
+
+## Dependencies
+
+The following libraries are required, please install, if not present:
+
+- shiny
+- plotrix
+- htmlTable
+
+Install with:
+
+```{r , eval=FALSE}
+install.packages("shiny")
+install.packages("plotrix")
+install.packages("htmlTable")
+```
+
+## Run and Usage
+
+### Run
+To start the application, make sure that these three files are in the same directory:
+
+- ui.R
+- server.R
+- hangman.rdata
+
+Switch to the application directory:
+```{r, eval=FALSE}
+    setwd("path/to/Hangman")
+```
+
+Run the Application
+
+```{r, eval=FALSE}
+    runApp('Hangman')
+```
+
+### Useage
+
+In this application you have to guess a random word. 
+You have to type letters in the text field. If you gess right , the letter appears in the word, if you guess wrong ... u will see.
+After the seventh wrong guess, you have lost.
+Either way, you can always start a new game by pressing the "new Game" button.
