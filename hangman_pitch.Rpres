@@ -1,20 +1,8 @@
-hangman_pitch
+Coursera Project - Creating a Shiny Web Application
 ========================================================
 author: Karl-Heinz Reisenauer
 date: 01.02.2017
 autosize: true
-
-Coursera Project - Creating a Shiny Web Application
-========================================================
-
-
-# *A Hangman game in R*  
-  
-  
-  
-  
-### Karl-Heinz Reisenauer
-### 01.02.2017
 
 
 The Idea
@@ -32,25 +20,45 @@ The idea for this project was born.
 The Data
 ========================================================
 
-The most important thing about such a game are the game data
+*The most important thing for such a game is the game data*
 
-The Idea
+Fortunately, Marek Hlavac already has a nice collection of words to guess, including the category as a reference.  
+
+They are all found in the file "hangman.rdata", which I used as the basis for the application
+
+```{r }
+load("hangman.rdata")
+hangman$category <- as.factor(hangman$category)
+str(hangman)
+```
+
+The small survey shows that there are 1291 words in 13 categories to guess.  
+So there is plenty of variety
+
+The Game
 ========================================================
 
+Of course, it needs an appealing GUI and top graphics to increase the guessing fun and to offer the player a great playing experience.
 
-Credits
+![of course you have to guess right to win](lost_game.png)
+
+So that the user keeps the overview, all already used letters are marked.  
+To guess, only one letter must be entered into the text field.  
+A new game can be started at any time by clicking the "new game" Button.  
+Of course you have to guess right to win ...
+
+
+Are you interested? 
 ========================================================
-This application has been inspired by Marek Hlavac (Political Economy and Government, Harvard University). 
 
-He has written a Hangman game in R and I wanted to convert it into a Shiny app.
-I have taken over the words to be guessed and some code fragmente and added the "HD" graphics and the Shniny part :).
+## Play the Game here <https://whantos.shinyapps.io/Hangman/>  
+## Get the Code here <https://github.com/whantos/hangman>  
+  
+  
+
+*Thanks to Marek Hlavac, who has shown that you can have fun with R not only with statistical ways.*
+
 
 The original can be found here:
-https://sites.google.com/site/marekhlavac/computer-games-written-in-r
+<https://sites.google.com/site/marekhlavac/computer-games-written-in-r>
 
-Slide With Plot
-========================================================
-
-```{r, echo=FALSE}
-plot(cars)
-```
