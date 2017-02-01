@@ -1,0 +1,56 @@
+hangman_pitch
+========================================================
+author: Karl-Heinz Reisenauer
+date: 01.02.2017
+autosize: true
+
+Coursera Project - Creating a Shiny Web Application
+========================================================
+
+
+# *A Hangman game in R*  
+  
+  
+  
+  
+### Karl-Heinz Reisenauer
+### 01.02.2017
+
+
+The Idea
+========================================================
+
+# A small game between the hard work promotes the quality
+
+In the spirit of this idea, I found a hangman game written in R by Marek Hlavac. 
+
+Excited from this idea, I also wanted to create such a mini game as a Shiny Application ...  
+
+The idea for this project was born.
+
+
+The Data
+========================================================
+
+The most important thing about such a game are the game data
+
+The Idea
+========================================================
+
+
+Credits
+========================================================
+This application has been inspired by Marek Hlavac (Political Economy and Government, Harvard University). 
+
+He has written a Hangman game in R and I wanted to convert it into a Shiny app.
+I have taken over the words to be guessed and some code fragmente and added the "HD" graphics and the Shniny part :).
+
+The original can be found here:
+https://sites.google.com/site/marekhlavac/computer-games-written-in-r
+
+Slide With Plot
+========================================================
+
+```{r, echo=FALSE}
+plot(cars)
+```
